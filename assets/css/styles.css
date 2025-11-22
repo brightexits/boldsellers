@@ -1037,12 +1037,15 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-lg);
     overflow: hidden;
+    aspect-ratio: 16 / 9;
 }
 
 .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    height: 100%;
     border: none;
 }
 
