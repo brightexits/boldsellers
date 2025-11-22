@@ -155,7 +155,8 @@ body {
     width: auto;
 }
 
-.nav-links {
+.nav-links,
+.nav-menu {
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
@@ -546,6 +547,12 @@ body {
     line-height: 1;
 }
 
+.service-icon svg {
+    width: 3rem;
+    height: 3rem;
+    color: var(--color-accent);
+}
+
 .service-card h3 {
     font-family: var(--font-display);
     font-size: 1.5rem;
@@ -624,6 +631,12 @@ body {
 .result-icon {
     font-size: 3rem;
     margin-bottom: var(--spacing-md);
+}
+
+.result-icon svg {
+    width: 3rem;
+    height: 3rem;
+    color: var(--color-accent);
 }
 
 .result-stat {
@@ -1005,5 +1018,62 @@ body {
     .footer-legal {
         flex-direction: column;
         gap: var(--spacing-sm);
+    }
+}
+
+/* Video Page Styles */
+/* Add top margin to prevent content sliding under fixed navbar - only for video page */
+.video-page .video-section {
+    margin-top: 90px; /* Height of navbar + some breathing room */
+    padding: var(--spacing-md) 0 var(--spacing-sm) 0;
+    background: var(--color-background);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.calendly-section {
+    padding: var(--spacing-md) 0;
+    background: var(--color-background);
+}
+
+/* Video page CTA section - reduce spacing */
+.video-page .cta-section {
+    padding: var(--spacing-sm) 0;
+}
+
+/* Video page FAQ section - reduce top spacing */
+.video-page .faq {
+    padding-top: var(--spacing-md);
+}
+
+/* Mobile video adjustments */
+@media (max-width: 768px) {
+    .video-section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .video-wrapper {
+        margin: 0 -var(--spacing-md);
+        border-radius: 0;
+        box-shadow: none;
     }
 }
