@@ -978,12 +978,16 @@ body {
     gap: var(--spacing-lg);
 }
 
-.footer-legal span {
+.footer-legal span,
+.footer-legal a {
     cursor: pointer;
     transition: color 0.3s ease;
+    color: var(--color-text-muted);
+    text-decoration: none;
 }
 
-.footer-legal span:hover {
+.footer-legal span:hover,
+.footer-legal a:hover {
     color: var(--color-accent);
 }
 
