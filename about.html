@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - BoldSellers</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <style>
+        .about-page {
+            padding: calc(var(--spacing-xl) + 100px) 0 var(--spacing-xl) 0;
+            background: var(--color-background);
+        }
+        
+        .about-hero {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .about-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.1;
+        }
+        
+        .about-hero .subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--color-text-muted);
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-section {
+            margin-bottom: var(--spacing-xl);
+            padding: var(--spacing-xl);
+            background: rgba(6, 182, 212, 0.02);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .about-section p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .about-section p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1));
+            border: 2px solid rgba(6, 182, 212, 0.2);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+            text-align: center;
+        }
+        
+        .highlight-box p {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 0;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .philosophy-card {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(6, 182, 212, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .philosophy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1);
+            border-color: var(--color-accent);
+        }
+        
+        .philosophy-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .philosophy-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+        
+        .founder-intro {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-lg);
+        }
+        
+        .founder-intro h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .founder-intro .name {
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .closing-cta {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+            padding: var(--spacing-xl);
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(139, 92, 246, 0.05));
+            border-radius: var(--border-radius);
+        }
+        
+        .closing-cta h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .closing-cta p {
+            font-size: 1.125rem;
+            color: var(--color-text-muted);
+            margin-bottom: var(--spacing-lg);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .about-section {
+                padding: var(--spacing-md);
+            }
+            
+            .about-section p {
+                font-size: 1rem;
+            }
+            
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="/" class="logo">
+                        <img src="assets/images/logo.png" alt="BoldSellers" class="logo-img">
+                    </a>
+                    <div class="nav-links">
+                        <a href="/" class="btn btn-primary" style="white-space: nowrap; font-size: 0.9rem;">← Home</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about-page">
+        <div class="container">
+            <div class="about-hero">
+                <h1>About BoldSellers</h1>
+                <p class="subtitle">Built by someone who's been in the trenches of ecommerce for over a decade</p>
+            </div>
+
+            <div class="about-content">
+                <!-- Founder Introduction -->
+                <div class="founder-intro">
+                    <h2>The Person Behind BoldSellers</h2>
+                    <p class="name">Hamza El Bouni</p>
+                </div>
+
+                <!-- Main Story -->
+                <div class="about-section">
+                    <p>I've spent over a decade inside ecommerce, not as an observer, but as a builder. I've launched stores, managed paid acquisition, tested offers, optimized conversion flows, and worked through the real mechanics of what makes online brands succeed or fail.</p>
+                    
+                    <p>Over the years, I've managed multi seven-figure ad budgets and built digital assets designed to generate revenue consistently, not just temporarily. I've also been involved in buying and selling online businesses, which completely changed how I look at ecommerce.</p>
+                </div>
+
+                <!-- Key Distinction -->
+                <div class="highlight-box">
+                    <p>Most people build stores.<br>I build assets.</p>
+                </div>
+
+                <div class="about-section">
+                    <p>That distinction matters.</p>
+                    
+                    <p>When you understand how businesses are valued, you stop chasing short-term spikes and start designing for structure, margin, and scalability. You think in systems, not campaigns.</p>
+                </div>
+
+                <!-- Philosophy Cards -->
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <h3>Structure</h3>
+                        <p>Businesses are built on solid foundations, not quick fixes or temporary tactics.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3>Margin</h3>
+                        <p>Profitability isn't an accident. It's designed into every element of the business.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <h3>Scalability</h3>
+                        <p>Systems that work at $10k/month should work at $100k/month with the right infrastructure.</p>
+                    </div>
+                </div>
+
+                <!-- Why BoldSellers -->
+                <div class="about-section">
+                    <p>Bold Sellers was created from that philosophy.</p>
+                    
+                    <p>I saw too many founders launching stores without a real foundation. No positioning clarity. No conversion structure. No acquisition plan. Just a theme and hope.</p>
+                    
+                    <p>So instead of offering monthly retainers, I built a one-time Launch Package designed to do it properly from day one. A structured, conversion-ready ecommerce machine engineered to extract maximum value from every visitor.</p>
+                </div>
+
+                <!-- Final Statement -->
+                <div class="highlight-box">
+                    <p>This isn't about shortcuts.<br>It's about building it right the first time.</p>
+                </div>
+
+                <!-- Closing CTA -->
+                <div class="closing-cta">
+                    <h3>Let's Build Something Real</h3>
+                    <p>If you're serious about launching with intention, structure, and performance in mind, we'll work well together.</p>
+                    <a href="#book" class="btn btn-primary">Book a Strategy Call</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 BoldSellers. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/about">About</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/terms-of-service">Terms of Service</a>
+                    <a href="/cookie-policy">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
