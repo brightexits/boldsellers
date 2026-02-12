@@ -366,7 +366,7 @@ body {
 }
 
 .stat-number {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
     font-weight: 700;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -374,12 +374,12 @@ body {
     background-clip: text;
     font-family: var(--font-display);
     line-height: 1.2;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
     white-space: nowrap;
 }
 
 .stat-label {
-    font-size: 0.75rem;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     color: var(--color-text-muted);
     font-weight: 600;
     text-transform: uppercase;
