@@ -366,23 +366,25 @@ body {
 }
 
 .stat-number {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 900;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 700;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-family: var(--font-display);
-    line-height: 1;
-    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
 }
 
 .stat-label {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: var(--color-text-muted);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 .stat-divider {
